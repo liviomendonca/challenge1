@@ -6,9 +6,11 @@ name = "pypi"
 [packages]
 streamlit = "*"
 langchain = "*"
-langgraph = "*"
 groq = "*"
 python-dotenv = "*"
+langchain-core = "*"
+langgraph = ">0.2.27"
+langchain-groq = "*"
 
 [dev-packages]
 
