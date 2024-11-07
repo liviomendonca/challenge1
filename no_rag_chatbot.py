@@ -12,7 +12,7 @@ CHROMA_PATH = 'chroma'
 
 
 st.set_page_config(page_icon="💬", layout="wide", page_title="ChatBot")
-st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
+st.subheader("Groq Chatbot without RAG", divider="rainbow", anchor=False)
 
 
 client = Groq(
