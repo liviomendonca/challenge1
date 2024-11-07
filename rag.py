@@ -1,10 +1,10 @@
 import os
 import shutil
+
 from langchain.schema import Document
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-# from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
@@ -47,14 +47,14 @@ def split_text(documents: list[Document]):
 
 
 # Define embedding model
-# model_name = "hkunlp/instructor-large"
+model_name = "hkunlp/instructor-large"
 # model_name = "all-MiniLM-L6-v2"
 model_kwargs = {'device': 'cpu'}
 encode_kwargs = {'normalize_embeddings': True}
 hf = HuggingFaceBgeEmbeddings(
-    # model_name="hkunlp/instructor-xl",
+    model_name=model_name,
     # model_kwargs=model_kwargs,
-    # encode_kwargs=encode_kwargs
+    encode_kwargs=encode_kwargs
 )
 
 
